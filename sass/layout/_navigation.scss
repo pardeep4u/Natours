@@ -1,0 +1,131 @@
+.navigation {
+  &__checkbox {
+    display: none;
+  }
+
+  &__label {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    background-color: #eee;
+    z-index: 100;
+    position: fixed;
+    top: 6.5rem;
+    right: 6.5rem;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      cursor: pointer;
+    }
+
+    @include respond(tab) {
+      top: 4rem;
+      right: 4rem;
+    }
+
+    @include respond(phone) {
+      top: 3rem;
+      right: 3rem;
+    }
+  }
+  &__icon {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  &__background {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    background-image: radial-gradient(
+      $color-primary-light,
+      $color-primary-dark
+    );
+    z-index: 100;
+    position: fixed;
+    top: 7.5rem;
+    right: 7.5rem;
+    transition: all 0.5s ease-in-out;
+
+    @include respond(tab-land) {
+      top: 7.5rem;
+      right: 7.5rem;
+    }
+
+    @include respond(tab) {
+      top: 5.5rem;
+      right: 5.5rem;
+    }
+    @include respond(phone) {
+      top: 3.5rem;
+      right: 3.5rem;
+    }
+
+    // transform: scale(50);
+  }
+
+  &__nav {
+    // height: 100vh;
+    // width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 150;
+    width: 0;
+    opacity: 0;
+    height: 0;
+    transition: opacity 0.2s;
+    transition-delay: 0.4s;
+  }
+
+  &__list {
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-decoration: none;
+  }
+
+  &__item {
+    margin: 1rem;
+  }
+
+  &__link {
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: 300;
+    color: $color-white;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    background-image: linear-gradient(
+      120deg,
+      transparent 0%,
+      transparent 50%,
+      $color-white 50%
+    );
+    background-size: 250%;
+    transition: all 0.4s;
+
+    &:hover,
+    &:active {
+      background-position: 100%;
+      color: $color-primary;
+      transform: translateX(1rem);
+    }
+  }
+
+  &__checkbox:checked ~ &__background {
+    transform: scale(100);
+  }
+
+  &__checkbox:checked ~ &__nav {
+    height: 100vh;
+    width: 100vw;
+    opacity: 1;
+  }
+}
