@@ -10,7 +10,7 @@ Welcome to Natours! This project is a stunning showcase of the beauty of nature,
 
 ## Live Demo
 
-Check out the live demo of Natours [here](https://pardeep4u.github.io/natours).
+Check out the live demo of Natours [here](https://pardeep4u.github.io/Natours).
 
 ## Usage
 
