@@ -18,7 +18,7 @@ To explore Natours:
 
 1. Clone the repository:
    ```
-   git clone https://github.com/your-username/natours.git
+   git clone https://github.com/pardeep4u/natours.git
    ```
 2. Open the `index.html` file in your preferred web browser.
 3. Enjoy exploring the captivating beauty of Natours!
